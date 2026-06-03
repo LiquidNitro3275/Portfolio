@@ -7,6 +7,39 @@
   <title>Yousif Abdulaal | Student Portfolio</title>
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* RepForge featured card: spans the full row (space of three cards) without looking oversized */
+    .project-container .repforge-featured {
+      grid-column: 1 / -1;
+      width: 100%;
+      max-width: 100%;
+      min-height: 420px;
+    }
+
+    .project-container .repforge-featured img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .project-container .repforge-featured .project-info {
+      max-width: 900px;
+    }
+
+    @media (max-width: 900px) {
+      .project-container .repforge-featured {
+        grid-column: auto;
+        min-height: 360px;
+      }
+
+      .project-container .repforge-featured img {
+        height: 360px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -235,7 +268,7 @@
         </div>
       </div>
    
-      <div class="project-card">
+      <div class="project-card repforge-featured">
         <img src="reppy.png" alt="RepForge">
 
         <div class="project-info">
